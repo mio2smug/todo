@@ -1,1 +1,1 @@
-alert("Death grips was online");
+// alert("Death grips was online");

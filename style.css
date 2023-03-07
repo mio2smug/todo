@@ -1,3 +1,20 @@
 html, body{
     height: 100vh;
 }
+
+:root{
+    --headbar-height : 10%;
+}
+
+body > div {
+    border: 1px solid black;
+    /* height: 10%; */
+}
+
+#headbar{
+    height: var(--headbar-height);
+}
+
+#content--wrapper{
+    height: calc( 100% - var(--headbar-height))
+}
