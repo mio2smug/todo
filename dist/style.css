@@ -53,6 +53,15 @@ html, body{
                     justify-content: center;
                 }
 
+                #add-button-sidebar, #trash-button-sidebar{
+                    border: none;
+                }
+
+                #add-button-sidebar:hover, #trash-button-sidebar:hover{
+                    cursor: pointer;
+                    background-color: #fcfcfc;
+                }
+
             /*End of ICon headbar for sidebar*/
     .sidebar--content--wrapper{
         height: 100%;
@@ -114,6 +123,16 @@ html, body{
             background-color: var(--instruction-background-color);
         }
 
+            #content--icons--add, #content--icons--minus{
+                border: none;
+                height: 100%;
+                width: 100%;
+            }
+
+                #content--icons--add:hover, #content--icons--minus:hover{
+                    cursor: pointer;
+                    background-color: #fcfcfc;
+                }
         /*Content wrapper icon end*/
 
         .content--text--wrapper{
@@ -155,6 +174,7 @@ html, body{
     .content--divider2 {
        height: calc( 100% - var(--headbar-height));
        overflow: auto;
+       background-color: #f7f7f7;
     }
 
         .content--divider2 > div {
@@ -213,3 +233,67 @@ html, body{
                 align-items: center;
                 justify-content: center;
             }
+
+            .modal--wrapper {
+             position: fixed;
+             left: 30%; 
+             top: 30%; 
+             border: var(--test); 
+             z-index: 1;
+             background-color: #fcfcfc;
+             height: 20em;
+             width: 40em;
+             display: none;
+            }
+
+                .modal--content{
+                    height: 100%;
+                    width: 100%; 
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                    .modal--span--wrapper{
+                        height: 6%;
+                        display: flex;
+                        justify-content: end;
+                        padding-right: 1em;
+                    }
+
+                    .modal--form--wrapper{
+                        height: 70%;
+                    }
+
+                    .modal--button--wrapper{
+                        height: 23%;
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                        #modal--submit--button{
+                            height: 2em;
+                            width: 6em;
+                        }
+            
+            .sidebar--modal--wrapper{
+                display: none;
+                border: var(--test);
+                position: fixed;
+                top: 30%;
+                left: 5%;
+                height: 10em;
+                width: 10em;
+                background-color: #fcfcfc;
+            }
+
+            .sidebar--modal--content--wrapper{
+                height: 100%;
+                width: 100%;
+            }
+
+                #sidebar--input{
+                    width: 8em;
+                }
+
+
+

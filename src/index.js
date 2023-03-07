@@ -1,1 +1,1 @@
-// alert("Death grips is online")
+//  alert("Death grips is offline")
