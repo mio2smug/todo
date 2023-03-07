@@ -10,6 +10,7 @@ html, body{
     --sidebar-width: 10%;
     --subsequent-height: 3%;
     --test : 1px solid black;
+    --instruction-background-color: #ededed;
 }
 
 #headbar{
@@ -36,11 +37,14 @@ html, body{
 
             .text--wrapper{
                 width: 66%;
+                background-color: var(--instruction-background-color);
             }
 
             .myIcons--wrapper{
                 display: flex;
                 width: 33%;
+                background-color: var(--instruction-background-color);
+
             }
 
                 .myIcons--wrapper > div {
@@ -74,7 +78,7 @@ html, body{
 }
 
  #myTodolist > div {
-    /* border: 1px solid black; */
+    border: 1px solid black;
  }
 
     .content--divider1{
@@ -97,6 +101,8 @@ html, body{
             width: 66%;
             justify-content: center;
             align-items: center;
+            background-color: var(--instruction-background-color);
+
         }
 
         .content--icons{
@@ -104,6 +110,7 @@ html, body{
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: var(--instruction-background-color);
         }
 
         /*Content wrapper icon end*/
@@ -125,21 +132,34 @@ html, body{
 
             .date {
                 width: 15%;
+                background-color: var(--instruction-background-color);
             }
 
             .description--wrapper{
                 min-width: 61%;
+                background-color: var(--instruction-background-color);
             }
 
             .due--date{
                 width: 12%;
+                background-color: var(--instruction-background-color);
             }
 
             .urgency{
                 width: 12%;
+                background-color: var(--instruction-background-color);
             }
 
 
     .content--divider2 {
        height: calc( 100% - var(--headbar-height));
+       overflow: auto;
     }
+
+        .content--divider2 > div {
+            border: var(--test);
+        }
+
+        #content--template{
+            height: 15%;
+        }
