@@ -1,1 +1,1 @@
-(()=>{"use strict";alert("hello")})();
+(()=>{"use strict";(()=>{const e=document.querySelector("#add-button-sidebar"),t=document.querySelector("#mySidebarModal"),n=document.querySelector("#sidebar--submit--button"),o=document.querySelector("#sidebar--input"),c=document.querySelector("#my--sidebar--span");let u=[];function i(e){this.date=e}e.onclick=function(){t.style.display="block"},c.onclick=function(){t.style.display="none"},n.onclick=function(){l(),s(),t.style.display="none"};const l=()=>{u.push(new i(o.value))},s=()=>o.value=""})()})();
