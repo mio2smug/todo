@@ -42,7 +42,7 @@ html, body{
 
             .myIcons--wrapper{
                 display: flex;
-                width: 33%;
+                width: 34%;
                 background-color: var(--instruction-background-color);
 
             }
@@ -57,6 +57,7 @@ html, body{
     .sidebar--content--wrapper{
         height: 100%;
         overflow: auto;
+        background-color: #f7f7f7;
     }
 
         /*Template for future items to be added via js*/
@@ -78,7 +79,7 @@ html, body{
 }
 
  #myTodolist > div {
-    border: 1px solid black;
+    /* border: 1px solid black; */
  }
 
     .content--divider1{
@@ -157,9 +158,58 @@ html, body{
     }
 
         .content--divider2 > div {
-            border: var(--test);
+            /* border: var(--test); */
         }
 
         #content--template{
             height: 15%;
+            display: flex;
+            background-color: #f7f7f7;
         }
+
+        #content--template > div{
+            /* border: var(--test); */
+        }
+
+            .date--value{
+                width: 15%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .title--description--wrapper{
+                width: 61%;
+                display: flex;
+                flex-direction: column;
+            }
+
+                .title--value{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 25%;
+                }
+
+                .description--value {
+                    height: 75%;
+                    margin:  3px;
+                }
+                
+            .title--description--wrapper > div{
+                /* border: var(--test); */
+            }
+
+            .duedate--value{
+                width: 12%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .urgency--value {
+                width: 12%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
