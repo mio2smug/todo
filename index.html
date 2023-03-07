@@ -18,16 +18,22 @@
             <div class="myIcons">
                 <div class="text--wrapper"><h5>Day:</h5></div>
                 <div class="myIcons--wrapper">
-                    <div class="icon1">+</div>
-                    <div class="icon2">-</div>
+                    <div class="icon1">
+                        <button id ="add-button-sidebar"> +</button>
+                    </div>
+                    <div class="icon2">
+                        <button id ="trash-button-sidebar"> - </button>
+                    </div>
                 </div>
            </div>
 
            <!--Dummy content in template for test only -->
            <div class="sidebar--content--wrapper">
-                <div class="sidebar--template">
+                
+                <!-- <div class="sidebar--template">
                     <p>dummy content</p>
-                </div>
+                </div> -->
+
            </div>
         </div>
         
@@ -40,10 +46,10 @@
                         </div>
 
                         <div class="content--icons">
-                            <i>+</i>
+                            <button id="content--icons--add">+</button>
                         </div>
                         <div class="content--icons">
-                            <i>-</i>
+                            <button id="content--icons--minus">-</button>
                         </div>
                 </div>
                 <div class="content--text--wrapper">
@@ -64,7 +70,8 @@
 
                 <!--start of content wrapper-->
             <div class="content--divider2">
-                <div id="content--template">
+                
+                <!-- <div id="content--template">
                     <div class="date--value">
                         <p>6/5/22</p>
                     </div>
@@ -76,9 +83,54 @@
                         <p>6/6/22</p>
                     </div>
                     <div class="urgency--value">URGENT</div>
-                </div>
+                </div> -->
                 
             </div>
+        </div>
+    </div>
+
+        <!--Start of Modal for content-->
+    <div id="myModal" class="modal--wrapper">
+
+        <div class="modal--content">
+            <div class="modal--span--wrapper">
+                <span id="mySpan">&times;</span>
+            </div>
+            <div class="modal--form--wrapper">
+                <form action="#" method="post">
+                    <label for="date">Today's date:</label><br>
+                    <input type="text" id="date" name="date"><br>
+                    <label for="title">Title</label><br>
+                    <input type="text" id="title" name="title"><br>
+                    <label for="description">Description</label><br>
+                    <input type="text" id="description" name="description"><br>
+                    <label for="duedate">Due Date</label><br>
+                    <input type="text" id="duedate" name="duedate"><br>
+                    <label for="urgency">Urgency</label><br>
+                    <input type="text" id="urgency" name="urgency">
+                </form>
+            </div>
+            <div class="modal--button--wrapper">
+                <button id="modal--submit--button">Submit</button>
+            </div>
+        </div>
+    </div>
+    <!--End of Modal for content-->
+
+    <!--Start of sidebar modal-->
+
+    <div id="mySidebarModal" class="sidebar--modal--wrapper">
+        <div class="sidebar--modal--content--wrapper">
+            <div class="sidebar--span">
+                <span>&times;</span>
+            </div>
+            <div class="sidebar--form--wrapper">
+                <input id="sidebar--input" type="text">
+            </div>
+            <div class="sidebar--button--wrapper">
+                <button>Submit</button>
+            </div>
+
         </div>
     </div>
     
