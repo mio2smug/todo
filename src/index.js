@@ -1,1 +1,3 @@
-//  alert("Death grips is offline")
+import addToSidebar from './sidebar'
+
+addToSidebar();
