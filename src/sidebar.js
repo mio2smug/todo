@@ -33,6 +33,7 @@ const addToSidebar = () =>{
 
 
     function display (){
+        sidebarContent.innerHTML = ' ';
         for (let i = 0; i < myDays.length; i++){
             const myDiv = document.createElement('div')
             myDiv.classList.add('sidebar--template')
