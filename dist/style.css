@@ -3,7 +3,10 @@ html, body{
 }
 
 :root{
+    --auto-height: 100%;
     --headbar-height : 10%;
+    --auto-width: 100%;
+    --sidebar-width: 10%;
 }
 
 body > div {
@@ -16,5 +19,18 @@ body > div {
 }
 
 #content--wrapper{
-    height: calc( 100% - var(--headbar-height))
+    height: calc( 100% - var(--headbar-height));
+    display: flex;
 }
+
+.divider1 {
+    width: var(--sidebar-width);
+}
+
+.divider2 {
+    width: calc( 100% - var(--sidebar-width));
+}
+
+    #content--wrapper > div {
+        border: 1px solid black ;
+    }
