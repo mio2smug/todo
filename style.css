@@ -1,5 +1,6 @@
 html, body{
     height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 :root{
@@ -7,15 +8,13 @@ html, body{
     --headbar-height : 10%;
     --auto-width: 100%;
     --sidebar-width: 10%;
-}
-
-body > div {
-    border: 1px solid black;
-    /* height: 10%; */
+    --subsequent-height: 3%;
+    --test : 1px solid black;
 }
 
 #headbar{
     height: var(--headbar-height);
+    background-color: antiquewhite;
 }
 
 #content--wrapper{
@@ -23,14 +22,124 @@ body > div {
     display: flex;
 }
 
-.divider1 {
+#sidebar {
     width: var(--sidebar-width);
+    display: flex;
+    flex-direction: column;
 }
+        /*Start of Icon headbar for sidebar*/
+        .myIcons{
+            display: flex;
+            flex-direction: row;
+            height: 3%;
+        }
 
-.divider2 {
+            .text--wrapper{
+                width: 66%;
+            }
+
+            .myIcons--wrapper{
+                display: flex;
+                width: 33%;
+            }
+
+                .myIcons--wrapper > div {
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                }
+
+            /*End of ICon headbar for sidebar*/
+    .sidebar--content--wrapper{
+        height: 100%;
+        overflow: auto;
+    }
+
+        /*Template for future items to be added via js*/
+        .sidebar--template{
+            height: var(--subsequent-height);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 400;
+            font-size: small;
+        }
+        /*End of template*/
+
+
+        /*Start of content wrapper for events */
+#myTodolist {
+    overflow: hidden;
     width: calc( 100% - var(--sidebar-width));
 }
 
-    #content--wrapper > div {
-        border: 1px solid black ;
+ #myTodolist > div {
+    /* border: 1px solid black; */
+ }
+
+    .content--divider1{
+       height: var(--headbar-height);
+    }
+
+        /*Content Icon wrapper start*/
+        .content--icon--wrapper{
+            height: 65%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .content--icon--wrapper > div {
+            /* border: var(--test); */
+        }
+
+        .content--title{
+            display: flex;
+            width: 66%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content--icons{
+            width: 17%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*Content wrapper icon end*/
+
+        .content--text--wrapper{
+            height: 35%;
+            display: flex;
+        }
+
+        .content--text--wrapper > div {
+            /* border: var(--test); */
+            display: flex;
+            justify-content: center;
+            font-size: x-small;
+            align-items: end;
+            font-weight: 300;
+            padding-bottom: 5px;
+        }
+
+            .date {
+                width: 15%;
+            }
+
+            .description--wrapper{
+                min-width: 61%;
+            }
+
+            .due--date{
+                width: 12%;
+            }
+
+            .urgency{
+                width: 12%;
+            }
+
+
+    .content--divider2 {
+       height: calc( 100% - var(--headbar-height));
     }
