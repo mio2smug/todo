@@ -1,0 +1,1 @@
+alert("Death grips is online");
