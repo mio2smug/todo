@@ -20,6 +20,7 @@ const addToSidebar = () =>{
     }
     
     addButtonSidebar.onclick = function () {
+        // alert("Hi?")
         clearModal();
         sidebarModal.style.display = 'block'
     };
@@ -60,7 +61,7 @@ const addToSidebar = () =>{
     function onclickToArray (){
         for(let i = 0; i < myDivs.length; i++){
             myDivs[i].onclick = function () {
-                alert('hello?')
+                // console.log(myDivs  )
             }
         }
     };
