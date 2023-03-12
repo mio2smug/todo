@@ -10,6 +10,7 @@ const addToSidebar = () =>{
     //JS constants
     // let myInput;
     let myDays = []
+    let myDivs = []
 
     function day(date){
         this.date = date;
@@ -37,12 +38,16 @@ const addToSidebar = () =>{
         for (let i = 0; i < myDays.length; i++){
             const myDiv = document.createElement('div')
             myDiv.classList.add('sidebar--template')
+            const myButton = document.createElement('button')
+            myButton.classList.add('button--template--fit')
             const myP = document.createElement('p')
             myP.textContent = myDays[i].date  
-            // console.log("hello?")
-            myDiv.appendChild(myP)
-            // console.log("hi?")
-            sidebarContent.appendChild(myDiv);
+            myButton.appendChild(myP)
+            myDiv.appendChild(myButton)
+            myDivs.push(myDiv);
+            sidebarContent.appendChild(myButton);
+            // console.log(myDivs)
+            // myDiv.onclick(alert("hi"));
         }
     }
     

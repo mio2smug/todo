@@ -79,6 +79,21 @@ html, body{
             background-color: #f7f7f7;
             font-size: small;
         }
+
+        .sidebar--template:hover{
+            cursor: pointer;
+            background-color: gray;
+        }
+
+        .button--template--fit{
+            border: none;
+            width: 100%;
+        }
+
+        .button--template--fit:hover{
+            cursor: pointer;
+            background-color: gray;
+        }
         /*End of template*/
 
 
