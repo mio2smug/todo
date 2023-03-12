@@ -32,7 +32,7 @@ const addToSidebar = () =>{
         sidebarModal.style.display = 'none'
     };
 
-
+    //  Should probably make this into it's own function
     function display (){
         sidebarContent.innerHTML = ' ';
         for (let i = 0; i < myDays.length; i++){
@@ -40,16 +40,27 @@ const addToSidebar = () =>{
             myDiv.classList.add('sidebar--template')
             const myButton = document.createElement('button')
             myButton.classList.add('button--template--fit')
+            // myButton.prototype.onclick = alert("working?")
             const myP = document.createElement('p')
             myP.textContent = myDays[i].date  
             myButton.appendChild(myP)
             myDiv.appendChild(myButton)
             myDivs.push(myDiv);
-            sidebarContent.appendChild(myButton);
+            onclickToArray();
+            sidebarContent.appendChild(myDiv);
             // console.log(myDivs)
             // myDiv.onclick(alert("hi"));
         }
-    }
+    };
+
+    //  HOly canoli it actually works
+    function onclickToArray (){
+        for(let i = 0; i < myDivs.length; i++){
+            myDivs[i].onclick = function () {
+                alert('hello?')
+            }
+        }
+    };
     
     const addDayToLibrary = () => {myDays.push(new day(sideBarInput.value))}
     
