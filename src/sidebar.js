@@ -1,3 +1,6 @@
+// import createSidebarElement from "../sidaberElement";
+// import createSidebarElement from "./sidebarElement";
+
 const addToSidebar = () =>{
     //HTML elements
     const addButtonSidebar = document.querySelector('#add-button-sidebar');
