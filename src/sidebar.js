@@ -12,6 +12,8 @@ const addToSidebar = () =>{
     
     //JS Constants
     let mySchedule = [] //All page objects go into this array
+    let myDivs = []
+
 
     function Day (input){
         this.name = input
@@ -44,13 +46,15 @@ const addToSidebar = () =>{
         createDayObj(localValue);
         clearModal();
         sidebarModal.style.display = 'none'
-        console.log(mySchedule);
+        display()
+        // console.log(mySchedule);
     }
 
     const createDayObj = (x) => {
         let myLocalObj = x;
         myLocalObj = new Day(myLocalObj);
         pushObjToArr(myLocalObj);
+        return;
     };
 
     const pushObjToArr = (y) => {
@@ -59,6 +63,36 @@ const addToSidebar = () =>{
     };
 
     const clearModal = () => sideBarInput.value = '';
+
+    const display = function () {
+        sidebarContent.innerHTML = ''
+        myDivs = [];
+        for (let i =0; i<mySchedule.length; i++){
+            const myDiv = document.createElement('div') //create div
+            myDiv.classList.add('sidebar--template') //add sidebar temp class to div
+            const myButton = document.createElement('button') //create button
+            myButton.classList.add('button--template--fit') //add button template to button
+            const myP = document.createElement('p') //create P element
+            // console.log(mySchedule);
+            myP.textContent = mySchedule[i].name  //let text of P equal param
+            myButton.appendChild(myP) //add P to button
+            myDiv.appendChild(myButton) //add button to div
+            myDivs.push(myDiv);
+            sidebarContent.appendChild(myDiv); //add div to sidebar
+            onClickToArray();
+        }
+        // onClickToArray();
+    }
+
+    function onClickToArray (){
+        for(let i = 0; i < myDivs.length; i++){
+            myDivs[i].onclick = function () {
+                alert(i)
+            }
+        }
+    };
+
+    // const elementConstructor = function 
 
 
     
@@ -125,3 +159,5 @@ const addToSidebar = () =>{
 };
 
 export default addToSidebar
+
+//author's comment: it's very funny that I created the same program again
