@@ -13,6 +13,7 @@ const addToSidebar = () =>{
     //JS Constants
     let mySchedule = [] //All page objects go into this array
     let myDivs = []
+    let myIndex
 
 
     function Day (input){
@@ -66,6 +67,8 @@ const addToSidebar = () =>{
 
     const display = function () {
         sidebarContent.innerHTML = ''
+        //refreshes myDivs, when their onClick is pressed returns correct index
+        //useful for delete functions and 
         myDivs = [];
         for (let i =0; i<mySchedule.length; i++){
             const myDiv = document.createElement('div') //create div
@@ -87,75 +90,11 @@ const addToSidebar = () =>{
     function onClickToArray (){
         for(let i = 0; i < myDivs.length; i++){
             myDivs[i].onclick = function () {
-                alert(i)
+                myIndex = i;
+                alert(myIndex)
             }
         }
     };
-
-    // const elementConstructor = function 
-
-
-    
-    //JS constants
-    // let myInput;
-    // let myDays = []
-    // let myDivs = []
-
-    // function day(date){
-    //     this.date = date;
-    // }
-    
-    // addButtonSidebar.onclick = function () {
-    //     // alert("Hi?")
-    //     clearModal();
-    //     sidebarModal.style.display = 'block'
-    // };
-
-    // sideBarSpan.onclick = function () {
-    //     sidebarModal.style.display = 'none'
-    // }
-
-    // sideBarSubmit.onclick = function(){
-    //     addDayToLibrary();
-    //     clearModal();
-    //     display();
-    //     sidebarModal.style.display = 'none'
-    // };
-
-    // //  Should probably make this into it's own function
-    // function display (){
-    //     sidebarContent.innerHTML = ' ';
-    //     for (let i = 0; i < myDays.length; i++){
-    //         const myDiv = document.createElement('div')
-    //         myDiv.classList.add('sidebar--template')
-    //         const myButton = document.createElement('button')
-    //         myButton.classList.add('button--template--fit')
-    //         // myButton.prototype.onclick = alert("working?")
-    //         const myP = document.createElement('p')
-    //         myP.textContent = myDays[i].date  
-    //         myButton.appendChild(myP)
-    //         myDiv.appendChild(myButton)
-    //         myDivs.push(myDiv);
-    //         onclickToArray();
-    //         sidebarContent.appendChild(myDiv);
-    //         // console.log(myDivs)
-    //         // myDiv.onclick(alert("hi"));
-    //     }
-    // };
-
-    // //  HOly canoli it actually works
-    // function onclickToArray (){
-    //     for(let i = 0; i < myDivs.length; i++){
-    //         myDivs[i].onclick = function () {
-    //             // console.log(myDivs  )
-    //         }
-    //     }
-    // };
-    
-    // const addDayToLibrary = () => {myDays.push(new day(sideBarInput.value))}
-    
-    // const clearModal = () => sideBarInput.value = ''
-
 };
 
 export default addToSidebar
