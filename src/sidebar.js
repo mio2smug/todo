@@ -1,5 +1,6 @@
 // import createSidebarElement from "../sidaberElement";
 // import createSidebarElement from "./sidebarElement";
+import addToContent from './content'
 
 const addToSidebar = () =>{
     //HTML elements
@@ -13,7 +14,7 @@ const addToSidebar = () =>{
     //JS Constants
     let mySchedule = [] //All page objects go into this array
     let myDivs = []
-    let myIndex
+    let myIndex = 0;
 
 
     function Day (input){
@@ -21,13 +22,14 @@ const addToSidebar = () =>{
         this.data = []
     };
 
-    function Task (date, title, desc, due, urgency ){
-        this.date = date;
-        this.title = title;
-        this.desc = desc;
-        this.due = due;
-        this.urgency = urgency
-    };
+    //maybe this should go on content?
+    // function Task (date, title, desc, due, urgency ){
+    //     this.date = date;
+    //     this.title = title;
+    //     this.desc = desc;
+    //     this.due = due;
+    //     this.urgency = urgency
+    // };
 
 
     //sidebar plus button
@@ -91,7 +93,9 @@ const addToSidebar = () =>{
         for(let i = 0; i < myDivs.length; i++){
             myDivs[i].onclick = function () {
                 myIndex = i;
-                alert(myIndex)
+                alert('working ' + myIndex);
+                addToContent(i, mySchedule);
+                console.log(mySchedule)
             }
         }
     };
