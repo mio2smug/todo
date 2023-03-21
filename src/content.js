@@ -9,9 +9,12 @@ const addToContent = (i, mySchedule) => {
     const description = document.getElementById('description')
     const duedate = document.getElementById('duedate')
     const urgency = document.getElementById('urgency')
+    let myPageContent = document.querySelector('.content--divider2')
+
      // JS constants 
      let myCurrentTab = i;
-     let myScheduleCopy = mySchedule.splice();
+    //  let myScheduleCopy = mySchedule.splice(); not used
+     let myContent = [];
 
     function Task (date, title, desc, due, urgency ){
         this.date = date;
@@ -43,6 +46,7 @@ const addToContent = (i, mySchedule) => {
         createContentObj();
         clearContentModal();
         contentModal.style.display = 'none'
+        contentDisplay();
     }
 
     function setTask (){
@@ -116,10 +120,16 @@ const addToContent = (i, mySchedule) => {
         myDiv.appendChild(myDueDateDiv)
         myDiv.appendChild(myUrgencyDiv)
         
-        console.log(date.value, title.value, description.value, duedate.value, urgency.value)
-        // setTaskValues(myDateValue, myTitleValue, myDescValue, myDueDateValue, myUrgencyValue);
-        setTaskValues(date.value, title.value, description.value, duedate.value, urgency.value)
+        myContent.push(myDiv)
+        // setTaskValues(date.value, title.value, description.value, duedate.value, urgency.value)
         
+    };
+
+    function contentDisplay (){
+        myPageContent.innerHTML = ''
+        for(let i = 0; i<myContent.length; i++){
+            myPageContent.appendChild(myContent[i])
+        }
     };
 
     function setTaskValues (date, title, description, duedate, urgency) {

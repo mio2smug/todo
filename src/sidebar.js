@@ -87,7 +87,7 @@ const addToSidebar = () =>{
             onClickToArray();
         }
         // onClickToArray();
-    }
+    };
 
     function onClickToArray (){
         for(let i = 0; i < myDivs.length; i++){
