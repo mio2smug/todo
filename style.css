@@ -198,13 +198,13 @@ html, body{
             /* border: var(--test); */
         }
 
-        #content--template{
+        .content--template{
             height: 15%;
             display: flex;
             background-color: #f7f7f7;
         }
 
-        #content--template > div{
+        .content--template > div{
             /* border: var(--test); */
         }
 
@@ -231,6 +231,7 @@ html, body{
                 .description--value {
                     height: 75%;
                     margin:  3px;
+                    font-size: small;
                 }
                 
             .title--description--wrapper > div{
