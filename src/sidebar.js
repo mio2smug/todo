@@ -26,6 +26,8 @@ const addToSidebar = () =>{
         this.urgency = urgency
     };
 
+
+    //sidebar plus button
     addButtonSidebar.onclick = function(){
         // alert('hello?');
         sidebarModal.style.display = 'block'
@@ -37,7 +39,26 @@ const addToSidebar = () =>{
         clearModal()
     };
 
-    const clearModal = () => sideBarInput.value = ''
+    sideBarSubmit.onclick = function() {
+        let localValue = sideBarInput.value
+        createDayObj(localValue);
+        clearModal();
+        sidebarModal.style.display = 'none'
+        console.log(mySchedule);
+    }
+
+    const createDayObj = (x) => {
+        let myLocalObj = x;
+        myLocalObj = new Day(myLocalObj);
+        pushObjToArr(myLocalObj);
+    };
+
+    const pushObjToArr = (y) => {
+        mySchedule.push(y);
+        return;
+    };
+
+    const clearModal = () => sideBarInput.value = '';
 
 
     
